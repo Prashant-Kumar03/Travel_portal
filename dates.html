@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Voyara - Trip Dates</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/dates.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-icon">
+            ✈
+        </span>
+
+        <span>
+            Voyara
+        </span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            Explore
+        </a>
+
+        <a href="#">
+            Trips
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+        <button class="signup-btn">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     PAGE HEADER
+========================================= -->
+
+<section class="dates-header">
+
+    <div class="dates-container">
+
+        <p class="section-label">
+            STEP 6 OF YOUR JOURNEY
+        </p>
+
+        <h1>
+            Plan Your Stay
+        </h1>
+
+        <p>
+            Select your travel dates and number
+            of travellers.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="dates-container dates-main">
+
+
+    <!-- =====================================
+         LEFT SIDE
+    ====================================== -->
+
+    <section class="dates-card">
+
+        <div class="card-heading">
+
+            <span class="heading-icon">
+                📅
+            </span>
+
+            <div>
+
+                <h2>
+                    Travel Dates
+                </h2>
+
+                <p>
+                    When are you planning to travel?
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DATES -->
+
+        <div class="date-fields">
+
+
+            <div class="date-field">
+
+                <label for="checkIn">
+                    Check-in
+                </label>
+
+                <input
+                    type="date"
+                    id="checkIn"
+                >
+
+            </div>
+
+
+            <div class="date-arrow">
+                →
+            </div>
+
+
+            <div class="date-field">
+
+                <label for="checkOut">
+                    Check-out
+                </label>
+
+                <input
+                    type="date"
+                    id="checkOut"
+                >
+
+            </div>
+
+        </div>
+
+
+        <p
+            id="dateError"
+            class="error-message"
+        ></p>
+
+
+
+        <!-- =================================
+             GUESTS
+        ================================== -->
+
+        <div class="guest-section">
+
+            <div class="card-heading">
+
+                <span class="heading-icon">
+                    👥
+                </span>
+
+                <div>
+
+                    <h2>
+                        Travellers
+                    </h2>
+
+                    <p>
+                        Who is travelling?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADULTS -->
+
+            <div class="guest-row">
+
+                <div>
+
+                    <strong>
+                        Adults
+                    </strong>
+
+                    <span>
+                        Age 13+
+                    </span>
+
+                </div>
+
+
+                <div class="counter">
+
+                    <button
+                        class="counter-btn"
+                        data-type="adults"
+                        data-action="decrease"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="adultCount">
+                        1
+                    </span>
+
+
+                    <button
+                        class="counter-btn"
+                        data-type="adults"
+                        data-action="increase"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHILDREN -->
+
+            <div class="guest-row">
+
+                <div>
+
+                    <strong>
+                        Children
+                    </strong>
+
+                    <span>
+                        Age 0–12
+                    </span>
+
+                </div>
+
+
+                <div class="counter">
+
+                    <button
+                        class="counter-btn"
+                        data-type="children"
+                        data-action="decrease"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="childCount">
+                        0
+                    </span>
+
+
+                    <button
+                        class="counter-btn"
+                        data-type="children"
+                        data-action="increase"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROOMS -->
+
+            <div class="guest-row">
+
+                <div>
+
+                    <strong>
+                        Rooms
+                    </strong>
+
+                    <span>
+                        Number of rooms
+                    </span>
+
+                </div>
+
+
+                <div class="counter">
+
+                    <button
+                        class="counter-btn"
+                        data-type="rooms"
+                        data-action="decrease"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="roomCount">
+                        1
+                    </span>
+
+
+                    <button
+                        class="counter-btn"
+                        data-type="rooms"
+                        data-action="increase"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SPECIAL REQUEST -->
+
+        <div class="request-section">
+
+            <label for="specialRequest">
+                Special Request
+                <span>(Optional)</span>
+            </label>
+
+            <textarea
+                id="specialRequest"
+                rows="4"
+                placeholder="Any special requirements?"
+            ></textarea>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         RIGHT SIDE
+    ====================================== -->
+
+    <aside class="trip-preview">
+
+        <h2>
+            Trip Summary
+        </h2>
+
+
+        <!-- DESTINATION -->
+
+        <div class="preview-section">
+
+            <span>
+                DESTINATION
+            </span>
+
+            <strong id="destinationPreview">
+                —
+            </strong>
+
+        </div>
+
+
+
+        <!-- STAY -->
+
+        <div class="preview-section">
+
+            <span>
+                STAY
+            </span>
+
+            <strong id="stayPreview">
+                —
+            </strong>
+
+        </div>
+
+
+
+        <!-- DATES -->
+
+        <div class="preview-section">
+
+            <span>
+                DATES
+            </span>
+
+            <strong id="datePreview">
+                Select dates
+            </strong>
+
+        </div>
+
+
+
+        <!-- TRAVELLERS -->
+
+        <div class="preview-section">
+
+            <span>
+                TRAVELLERS
+            </span>
+
+            <strong id="travellerPreview">
+                1 Adult
+            </strong>
+
+        </div>
+
+
+
+        <!-- ESTIMATE -->
+
+        <div class="estimate-box">
+
+            <span>
+                Estimated Stay Cost
+            </span>
+
+            <strong id="estimatedCost">
+                ₹0
+            </strong>
+
+            <small>
+                Based on selected stay and nights
+            </small>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <button
+            id="backToStay"
+            class="back-button"
+        >
+            ← Back to Stay
+        </button>
+
+
+        <button
+            id="continueReview"
+            class="continue-button"
+        >
+            Continue to Review →
+        </button>
+
+
+    </aside>
+
+</main>
+
+
+
+<script src="js/data.js"></script>
+
+<script src="js/dates.js"></script>
+
+</body>
+
+</html>

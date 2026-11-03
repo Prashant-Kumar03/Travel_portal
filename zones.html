@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Voyara - Select Region</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/zones.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">✈</span>
+        <span>Voyara</span>
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            Explore
+        </a>
+
+        <a href="#">
+            Trips
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+        <button class="signup-btn">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="region-header">
+
+    <div>
+
+        <p class="section-label">
+            STEP 2 OF YOUR JOURNEY
+        </p>
+
+        <h1>
+            Select State / Region
+        </h1>
+
+        <p>
+            Choose one or more states or regions
+            you want to explore.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="region-container">
+
+
+    <!-- SELECTED ZONE -->
+
+    <div class="selected-zone">
+
+        <span>
+            Selected Zone
+        </span>
+
+        <strong id="zoneName">
+            Loading...
+        </strong>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="region-search">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="regionSearch"
+            placeholder="Search state or region..."
+        >
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="region-toolbar">
+
+        <div>
+
+            <span id="resultCount">
+                0 Regions
+            </span>
+
+        </div>
+
+        <div>
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="State"
+            >
+                States
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="Union Territory"
+            >
+                Union Territories
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGION CARDS -->
+
+    <div
+        class="regions-grid"
+        id="regionsContainer"
+    ></div>
+
+
+</main>
+
+
+<!-- ================= BOTTOM BAR ================= -->
+
+<div class="selection-bar">
+
+    <div>
+
+        <strong id="selectedCount">
+            0
+        </strong>
+
+        <span>
+            states / regions selected
+        </span>
+
+    </div>
+
+
+    <div class="selection-actions">
+
+        <button
+            id="clearSelection"
+            class="clear-btn"
+        >
+            Clear
+        </button>
+
+        <button
+            id="continueBtn"
+            class="continue-btn"
+        >
+            Continue →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/data.js"></script>
+<script src="js/zones.js"></script>
+
+</body>
+
+</html>

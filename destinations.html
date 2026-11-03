@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Voyara - Select Destination</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/destinations.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">✈</span>
+        <span>Voyara</span>
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Trips</a>
+        <a href="#">About</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+        <button class="signup-btn">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="destination-header">
+
+    <div>
+
+        <p class="section-label">
+            STEP 3 OF YOUR JOURNEY
+        </p>
+
+        <h1>
+            Choose Your Destination
+        </h1>
+
+        <p>
+            Select the cities or destinations
+            you want to explore.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="destination-container">
+
+
+    <!-- SELECTED REGIONS -->
+
+    <div class="selected-regions">
+
+        <span>
+            Selected Regions:
+        </span>
+
+        <div id="selectedRegionsList"></div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="destination-search">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="destinationSearch"
+            placeholder="Search city or destination..."
+        >
+
+    </div>
+
+
+    <!-- FILTER / SORT -->
+
+    <div class="destination-toolbar">
+
+        <span id="destinationCount">
+            0 destinations
+        </span>
+
+        <select id="sortDestination">
+
+            <option value="default">
+                Recommended
+            </option>
+
+            <option value="az">
+                Name A-Z
+            </option>
+
+            <option value="za">
+                Name Z-A
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- DESTINATION CARDS -->
+
+    <div
+        class="destination-results"
+        id="destinationContainer"
+    ></div>
+
+
+</main>
+
+
+<!-- ================= SELECTION BAR ================= -->
+
+<div class="destination-selection-bar">
+
+    <div class="selected-summary">
+
+        <strong id="selectedDestinationCount">
+            0
+        </strong>
+
+        <span>
+            destinations selected
+        </span>
+
+    </div>
+
+
+    <div class="selection-actions">
+
+        <button
+            id="clearDestinations"
+            class="clear-btn"
+        >
+            Clear
+        </button>
+
+        <button
+            id="continuePlaces"
+            class="continue-btn"
+        >
+            Explore Tourist Places →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/data.js"></script>
+<script src="js/destinations.js"></script>
+
+</body>
+
+</html>

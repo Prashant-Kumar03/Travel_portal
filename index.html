@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voyara - Explore India</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✈</span>
+            <span>Voyara</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Explore</a>
+            <a href="#">Destinations</a>
+            <a href="#">Trips</a>
+            <a href="#">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-small-title">
+                EXPLORE • DISCOVER • EXPERIENCE
+            </p>
+
+            <h1>
+                Your Journey Starts<br>
+                <span>Here.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover amazing destinations, tourist places,
+                hotels and unforgettable experiences across India.
+            </p>
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="destinationSearch"
+                    placeholder="Search city, state, region or destination..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- POPULAR SEARCHES -->
+
+            <div class="popular-searches">
+
+                <span>Popular:</span>
+
+                <button>Puri</button>
+                <button>Goa</button>
+                <button>Jaipur</button>
+                <button>Manali</button>
+                <button>Munnar</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ZONE SECTION ================= -->
+
+    <section class="zones-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                DISCOVER INDIA
+            </p>
+
+            <h2>
+                Where do you want to go?
+            </h2>
+
+            <p>
+                Start your journey by selecting a region of India.
+            </p>
+
+        </div>
+
+
+        <!-- ZONE CARDS -->
+
+        <div class="zones-grid" id="zonesContainer">
+            <!-- JavaScript will load zones here -->
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR DESTINATIONS ================= -->
+
+    <section class="popular-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                POPULAR DESTINATIONS
+            </p>
+
+            <h2>
+                Places travelers love
+            </h2>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+                    alt="Goa"
+                >
+
+                <div class="destination-info">
+
+                    <span>Goa</span>
+
+                    <h3>
+                        Beaches & Adventure
+                    </h3>
+
+                    <p>
+                        Explore beautiful beaches,
+                        nightlife and coastal experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+                    alt="Jaipur"
+                >
+
+                <div class="destination-info">
+
+                    <span>Jaipur</span>
+
+                    <h3>
+                        The Pink City
+                    </h3>
+
+                    <p>
+                        Discover forts, palaces and
+                        Rajasthan's royal heritage.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+                    alt="Agra"
+                >
+
+                <div class="destination-info">
+
+                    <span>Agra</span>
+
+                    <h3>
+                        Taj Mahal
+                    </h3>
+
+                    <p>
+                        Experience one of India's
+                        most iconic landmarks.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=800&q=80"
+                    alt="Kerala"
+                >
+
+                <div class="destination-info">
+
+                    <span>Kerala</span>
+
+                    <h3>
+                        God's Own Country
+                    </h3>
+
+                    <p>
+                        Explore backwaters, hills
+                        and tropical landscapes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="workflow-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                HOW VOYARA WORKS
+            </p>
+
+            <h2>
+                Plan your trip in simple steps
+            </h2>
+
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="workflow-item">
+                <span>01</span>
+                <h3>Search</h3>
+                <p>
+                    Find a state, region, city or destination.
+                </p>
+            </div>
+
+            <div class="workflow-item">
+                <span>02</span>
+                <h3>Select Places</h3>
+                <p>
+                    Choose one or multiple tourist places.
+                </p>
+            </div>
+
+            <div class="workflow-item">
+                <span>03</span>
+                <h3>Choose Stay</h3>
+                <p>
+                    Find hotels, villas and other stays.
+                </p>
+            </div>
+
+            <div class="workflow-item">
+                <span>04</span>
+                <h3>Build Trip</h3>
+                <p>
+                    Create your itinerary and review your trip.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ✈ Voyara
+        </div>
+
+        <p>
+            From Dreams to Destinations
+        </p>
+
+        <p class="copyright">
+            © 2026 Voyara. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>33
+</html> 

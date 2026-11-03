@@ -1,0 +1,663 @@
+/* =========================================
+   HEADER
+========================================= */
+
+.destination-header {
+
+    padding: 70px 7% 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ef,
+            #ffffff
+        );
+
+}
+
+
+.destination-header h1 {
+
+    font-size: 48px;
+
+    margin: 10px 0;
+
+    color: #172033;
+
+}
+
+
+.destination-header p:not(.section-label) {
+
+    color: #777;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.destination-container {
+
+    width: 86%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        35px 0 150px;
+
+}
+
+
+/* =========================================
+   SELECTED REGIONS
+========================================= */
+
+.selected-regions {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.selected-regions > span {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+#selectedRegionsList {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.region-badge {
+
+    background: #fff0e5;
+
+    color: #e85d04;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.destination-search {
+
+    height: 60px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: white;
+
+    margin-bottom: 20px;
+
+}
+
+
+.destination-search span {
+
+    font-size: 25px;
+
+    color: #777;
+
+}
+
+
+.destination-search input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.destination-toolbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.destination-toolbar span {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+.destination-toolbar select {
+
+    padding: 10px 14px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.destination-results {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.destination-card-large {
+
+    background: white;
+
+    border:
+        2px solid transparent;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.08);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.destination-card-large:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.12);
+
+}
+
+
+.destination-card-large.selected {
+
+    border-color: #e85d04;
+
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.destination-image {
+
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.destination-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+
+}
+
+
+.destination-card-large:hover
+.destination-image img {
+
+    transform: scale(1.07);
+
+}
+
+
+/* =========================================
+   SELECT BUTTON
+========================================= */
+
+.destination-select {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: white;
+
+    color: #e85d04;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.15);
+
+}
+
+
+.destination-card-large.selected
+.destination-select {
+
+    background: #e85d04;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.destination-content {
+
+    padding: 20px;
+
+}
+
+
+.destination-location {
+
+    color: #e85d04;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.destination-content h2 {
+
+    font-size: 24px;
+
+    margin:
+        8px 0;
+
+}
+
+
+.destination-content p {
+
+    color: #777;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    min-height: 42px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.destination-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 18px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid #eee;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+.select-text {
+
+    color: #e85d04;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.destination-empty {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+.empty-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.destination-empty h3 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.destination-empty p {
+
+    color: #777;
+
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.destination-selection-bar {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    min-height: 85px;
+
+    padding:
+        15px 7%;
+
+    background: white;
+
+    border-top:
+        1px solid #ddd;
+
+    box-shadow:
+        0 -5px 25px
+        rgba(0,0,0,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 900;
+
+}
+
+
+.selected-summary strong {
+
+    color: #e85d04;
+
+    font-size: 26px;
+
+    margin-right: 5px;
+
+}
+
+
+.selected-summary span {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+.selection-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.clear-btn {
+
+    padding:
+        13px 22px;
+
+    border:
+        1px solid #ddd;
+
+    background: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.continue-btn {
+
+    padding:
+        13px 25px;
+
+    border: none;
+
+    background: #e85d04;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .destination-results {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .destination-header {
+
+        padding:
+            45px 20px;
+
+    }
+
+
+    .destination-header h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .destination-container {
+
+        width: 90%;
+
+    }
+
+
+    .destination-results {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .destination-toolbar {
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .destination-selection-bar {
+
+        padding:
+            12px 20px;
+
+    }
+
+
+    .selected-summary {
+
+        display: none;
+
+    }
+
+
+    .selection-actions {
+
+        width: 100%;
+
+    }
+
+
+    .clear-btn {
+
+        width: 35%;
+
+    }
+
+
+    .continue-btn {
+
+        width: 65%;
+
+    }
+
+}

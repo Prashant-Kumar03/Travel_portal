@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Voyara - Choose Your Stay</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/stay.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-icon">✈</span>
+
+        <span>Voyara</span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            Explore
+        </a>
+
+        <a href="#">
+            Trips
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+        <button class="signup-btn">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     PAGE HEADER
+========================================= -->
+
+<section class="stay-header">
+
+    <div class="stay-container">
+
+        <p class="section-label">
+            STEP 5 OF YOUR JOURNEY
+        </p>
+
+        <h1>
+            Find Your Perfect Stay
+        </h1>
+
+        <p>
+            Choose a comfortable place to stay
+            during your journey.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TRIP SUMMARY
+========================================= -->
+
+<section class="trip-summary">
+
+    <div class="stay-container">
+
+        <div class="summary-box">
+
+            <div>
+
+                <span class="summary-label">
+                    DESTINATION
+                </span>
+
+                <strong id="destinationSummary">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span class="summary-label">
+                    PLACES
+                </span>
+
+                <strong id="placesSummary">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span class="summary-label">
+                    STAYS FOUND
+                </span>
+
+                <strong id="staySummary">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="stay-container stay-main">
+
+
+    <!-- =====================================
+         FILTER SIDEBAR
+    ====================================== -->
+
+    <aside class="stay-sidebar">
+
+        <h3>
+            Filter Stays
+        </h3>
+
+
+        <!-- SEARCH -->
+
+        <div class="filter-group">
+
+            <label>
+                Search
+            </label>
+
+            <input
+                type="text"
+                id="staySearch"
+                placeholder="Search hotels..."
+            >
+
+        </div>
+
+
+        <!-- PROPERTY TYPE -->
+
+        <div class="filter-group">
+
+            <label>
+                Property Type
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="checkbox"
+                    class="type-filter"
+                    value="hotel"
+                >
+
+                Hotel
+
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="checkbox"
+                    class="type-filter"
+                    value="resort"
+                >
+
+                Resort
+
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="checkbox"
+                    class="type-filter"
+                    value="villa"
+                >
+
+                Villa
+
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="checkbox"
+                    class="type-filter"
+                    value="guesthouse"
+                >
+
+                Guest House
+
+            </label>
+
+        </div>
+
+
+        <!-- RATING -->
+
+        <div class="filter-group">
+
+            <label>
+                Minimum Rating
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="radio"
+                    name="rating"
+                    value="4"
+                >
+
+                ⭐ 4+
+
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="radio"
+                    name="rating"
+                    value="3"
+                >
+
+                ⭐ 3+
+
+            </label>
+
+
+            <label class="check-option">
+
+                <input
+                    type="radio"
+                    name="rating"
+                    value="0"
+                    checked
+                >
+
+                Any Rating
+
+            </label>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="filter-group">
+
+            <label>
+                Maximum Price / Night
+            </label>
+
+
+            <input
+                type="range"
+                id="priceRange"
+                min="1000"
+                max="10000"
+                value="10000"
+                step="500"
+            >
+
+
+            <div class="price-value">
+
+                Up to ₹
+                <span id="priceValue">
+                    10000
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="clearStayFilters"
+            class="clear-filter"
+        >
+            Clear Filters
+        </button>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         STAYS
+    ====================================== -->
+
+    <section class="stay-content">
+
+
+        <!-- TOOLBAR -->
+
+        <div class="stay-toolbar">
+
+            <div>
+
+                <strong id="stayCount">
+                    0
+                </strong>
+
+                stays found
+
+            </div>
+
+
+            <select id="sortStays">
+
+                <option value="recommended">
+                    Recommended
+                </option>
+
+                <option value="rating">
+                    Highest Rated
+                </option>
+
+                <option value="price-low">
+                    Price: Low to High
+                </option>
+
+                <option value="price-high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- STAY GRID -->
+
+        <div
+            id="stayGrid"
+            class="stay-grid"
+        ></div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     SELECTED STAY BAR
+========================================= -->
+
+<div class="stay-selection-bar">
+
+    <div>
+
+        <span>
+            Selected Stay
+        </span>
+
+        <strong id="selectedStayName">
+            None
+        </strong>
+
+    </div>
+
+
+    <div class="stay-actions">
+
+        <button
+            id="backToPlaces"
+            class="back-btn"
+        >
+            ← Places
+        </button>
+
+
+        <button
+            id="continueDates"
+            class="continue-btn"
+        >
+            Continue to Dates →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/data.js"></script>
+
+<script src="js/stay.js"></script>
+
+</body>
+
+</html>

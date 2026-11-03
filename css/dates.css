@@ -1,0 +1,618 @@
+/* =========================================
+   HEADER
+========================================= */
+
+.dates-header {
+
+    padding:
+        60px 0 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ef,
+            #ffffff
+        );
+
+}
+
+
+.dates-container {
+
+    width: 86%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+}
+
+
+.dates-header h1 {
+
+    font-size: 44px;
+
+    color: #172033;
+
+    margin:
+        10px 0;
+
+}
+
+
+.dates-header p:not(.section-label) {
+
+    color: #777;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.dates-main {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.8fr;
+
+    gap: 35px;
+
+    padding:
+        45px 0 80px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.dates-card {
+
+    background: white;
+
+    border:
+        1px solid #eee;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.06);
+
+}
+
+
+.card-heading {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.heading-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff1e8;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+
+}
+
+
+.card-heading h2 {
+
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #172033;
+
+}
+
+
+.card-heading p {
+
+    margin:
+        5px 0 0;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   DATES
+========================================= */
+
+.date-fields {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 30px 1fr;
+
+    align-items: end;
+
+    gap: 12px;
+
+}
+
+
+.date-field label {
+
+    display: block;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.date-field input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+}
+
+
+.date-arrow {
+
+    text-align: center;
+
+    color: #e85d04;
+
+    padding-bottom: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.error-message {
+
+    color: #d62828;
+
+    font-size: 13px;
+
+    min-height: 18px;
+
+    margin:
+        10px 0;
+
+}
+
+
+/* =========================================
+   GUESTS
+========================================= */
+
+.guest-section {
+
+    border-top:
+        1px solid #eee;
+
+    margin-top: 25px;
+
+    padding-top: 30px;
+
+}
+
+
+.guest-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid #f1f1f1;
+
+}
+
+
+.guest-row strong {
+
+    display: block;
+
+    color: #172033;
+
+}
+
+
+.guest-row span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+.counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.counter > span {
+
+    color: #172033;
+
+    font-size: 16px;
+
+    min-width: 18px;
+
+    text-align: center;
+
+}
+
+
+.counter-btn {
+
+    width: 32px;
+
+    height: 32px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+}
+
+
+.counter-btn:hover {
+
+    border-color: #e85d04;
+
+    color: #e85d04;
+
+}
+
+
+/* =========================================
+   REQUEST
+========================================= */
+
+.request-section {
+
+    margin-top: 30px;
+
+}
+
+
+.request-section label {
+
+    display: block;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+}
+
+
+.request-section label span {
+
+    color: #999;
+
+    font-weight: normal;
+
+    font-size: 12px;
+
+}
+
+
+.request-section textarea {
+
+    width: 100%;
+
+    resize: vertical;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 9px;
+
+    padding: 13px;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.trip-preview {
+
+    height: fit-content;
+
+    position: sticky;
+
+    top: 20px;
+
+    background: white;
+
+    border:
+        1px solid #eee;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.06);
+
+}
+
+
+.trip-preview h2 {
+
+    margin:
+        0 0 20px;
+
+    color: #172033;
+
+}
+
+
+.preview-section {
+
+    padding:
+        15px 0;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+.preview-section span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.preview-section strong {
+
+    color: #172033;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   ESTIMATE
+========================================= */
+
+.estimate-box {
+
+    margin:
+        20px 0;
+
+    padding: 18px;
+
+    background: #fff7ef;
+
+    border-radius: 10px;
+
+}
+
+
+.estimate-box span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+.estimate-box strong {
+
+    display: block;
+
+    font-size: 27px;
+
+    color: #172033;
+
+    margin:
+        5px 0;
+
+}
+
+
+.estimate-box small {
+
+    color: #999;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.back-button,
+.continue-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.back-button {
+
+    background: white;
+
+    border:
+        1px solid #ddd;
+
+    margin-bottom: 10px;
+
+}
+
+
+.continue-button {
+
+    background: #e85d04;
+
+    color: white;
+
+    border: none;
+
+}
+
+
+.continue-button:hover {
+
+    background: #cf5000;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .dates-main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .trip-preview {
+
+        position: static;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dates-container {
+
+        width: 90%;
+
+    }
+
+
+    .dates-header h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .dates-card {
+
+        padding: 20px;
+
+    }
+
+
+    .date-fields {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .date-arrow {
+
+        display: none;
+
+    }
+
+}

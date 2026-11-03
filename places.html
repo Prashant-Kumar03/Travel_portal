@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Voyara - Tourist Places</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/places.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-icon">✈</span>
+
+        <span>
+            Voyara
+        </span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            Explore
+        </a>
+
+        <a href="#">
+            Trips
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <button class="login-btn">
+            Login
+        </button>
+
+        <button class="signup-btn">
+            Sign Up
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     PAGE HEADER
+========================================= -->
+
+<section class="places-header">
+
+    <div>
+
+        <p class="section-label">
+            STEP 4 OF YOUR JOURNEY
+        </p>
+
+        <h1>
+            Discover Tourist Places
+        </h1>
+
+        <p>
+            Choose the places you want to
+            include in your trip.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SELECTED DESTINATIONS
+========================================= -->
+
+<section class="selected-destination-section">
+
+    <div class="places-container">
+
+        <div class="selected-destination-info">
+
+            <span>
+                Exploring:
+            </span>
+
+            <div
+                id="selectedDestinationNames"
+                class="destination-pills"
+            ></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="places-container places-main">
+
+
+    <!-- =====================================
+         LEFT FILTER SIDEBAR
+    ====================================== -->
+
+    <aside class="places-sidebar">
+
+        <h3>
+            Filter Places
+        </h3>
+
+
+        <div class="filter-group">
+
+            <label>
+                Search
+            </label>
+
+            <input
+                type="text"
+                id="placeSearch"
+                placeholder="Search places..."
+            >
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label>
+                Category
+            </label>
+
+
+            <label class="checkbox-option">
+
+                <input
+                    type="checkbox"
+                    value="heritage"
+                    class="category-filter"
+                >
+
+                Heritage
+
+            </label>
+
+
+            <label class="checkbox-option">
+
+                <input
+                    type="checkbox"
+                    value="temple"
+                    class="category-filter"
+                >
+
+                Temple
+
+            </label>
+
+
+            <label class="checkbox-option">
+
+                <input
+                    type="checkbox"
+                    value="beach"
+                    class="category-filter"
+                >
+
+                Beach
+
+            </label>
+
+
+            <label class="checkbox-option">
+
+                <input
+                    type="checkbox"
+                    value="nature"
+                    class="category-filter"
+                >
+
+                Nature
+
+            </label>
+
+
+            <label class="checkbox-option">
+
+                <input
+                    type="checkbox"
+                    value="adventure"
+                    class="category-filter"
+                >
+
+                Adventure
+
+            </label>
+
+        </div>
+
+
+        <button
+            id="clearFilters"
+            class="clear-filter-btn"
+        >
+            Clear Filters
+        </button>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         RIGHT CONTENT
+    ====================================== -->
+
+    <section class="places-content">
+
+
+        <div class="places-toolbar">
+
+            <div>
+
+                <strong id="placesCount">
+                    0
+                </strong>
+
+                places found
+
+            </div>
+
+
+            <select id="sortPlaces">
+
+                <option value="recommended">
+                    Recommended
+                </option>
+
+                <option value="rating">
+                    Highest Rated
+                </option>
+
+                <option value="name">
+                    Name A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- PLACE CARDS -->
+
+        <div
+            id="placesGrid"
+            class="places-grid"
+        ></div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     MAP SECTION
+========================================= -->
+
+<section class="map-section">
+
+    <div class="places-container">
+
+        <div class="map-heading">
+
+            <div>
+
+                <p class="section-label">
+                    EXPLORE ON MAP
+                </p>
+
+                <h2>
+                    Your Selected Places
+                </h2>
+
+            </div>
+
+
+            <span id="mapPlaceCount">
+                0 places selected
+            </span>
+
+        </div>
+
+
+        <div class="map-wrapper">
+
+            <div
+                id="mapMarkers"
+                class="map-marker-list"
+            >
+
+                <p class="map-placeholder">
+                    Select places to see them here.
+                </p>
+
+            </div>
+
+
+            <div class="map-frame">
+
+                <iframe
+                    id="mapFrame"
+                    src="about:blank"
+                    loading="lazy"
+                    title="Tourist places map"
+                >
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BOTTOM SELECTION BAR
+========================================= -->
+
+<div class="places-selection-bar">
+
+    <div>
+
+        <strong id="selectedPlaceCount">
+            0
+        </strong>
+
+        <span>
+            places selected
+        </span>
+
+    </div>
+
+
+    <div class="place-actions">
+
+        <button
+            id="clearPlaces"
+            class="clear-btn"
+        >
+            Clear
+        </button>
+
+
+        <button
+            id="continueStay"
+            class="continue-btn"
+        >
+            Continue to Stay →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/data.js"></script>
+
+<script src="js/places.js"></script>
+
+</body>
+
+</html>
